@@ -1,0 +1,1 @@
+# nuxeo-webengine-invite-webobject-override
