@@ -21,6 +21,8 @@ import java.io.Serializable;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -115,7 +117,8 @@ public class CustomUserInvitationObject extends UserInvitationObject {
                     ctx.getMessage("label.errror.requestNotAccepted"));
         }
         // User redirected to the logout page after validating the password
-        String webappName = VirtualHostHelper.getWebAppName(getContext().getRequest());
+        HttpServletRequest request2 = getContext().getRequest();
+        String webappName = VirtualHostHelper.getWebAppName(request2);
         String logoutUrl = "/" + webappName + "/logout";
         return getBaseView("UserCreated").arg("data", registrationData).arg("logout", logoutUrl);
     }
