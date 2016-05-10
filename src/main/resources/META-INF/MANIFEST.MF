@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: nuxeo-webengine-invite-webobject-override;singlet
+ on:=true
+Nuxeo-WebModule: org.nuxeo.ecm.webengine.app.WebEngineModule;name=cust
+ omInvite;extends=invite;headless=true
+Bundle-Name: nuxeo-webengine-invite-webobject-override
+Bundle-Version: 1.0.0
+Bundle-ManifestVersion: 2
+Bundle-Vendor: Vincent Dutat
+Nuxeo-Component: OSGI-INF/custom-invite-auth-contrib.xml, OSGI-INF/cut
+ om-user-invitation-contrib.xml
+

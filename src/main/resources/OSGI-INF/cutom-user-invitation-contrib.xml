@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.ecm.user.invite.core.service.contrib.customUserInvitation">
+
+  <require>org.nuxeo.ecm.user.invite.core.service.contrib</require>
+
+  <extension target="org.nuxeo.ecm.user.invite.UserInvitationService" point="configuration">
+
+    <configuration merge="true" >
+      <validationRelUrl>site/customUserInvitation/validate</validationRelUrl>
+    </configuration>
+    
+  </extension>
+
+</component>
