@@ -4,6 +4,9 @@
   <extension
       target="org.nuxeo.ecm.platform.ui.web.auth.service.PluggableAuthenticationService"
       point="openUrl">
+    <openUrl name="CustomRegisterUser_validate">
+      <grantPattern>${org.nuxeo.ecm.contextPath}/site/customUserInvitation/validate</grantPattern>
+    </openUrl>
     <openUrl name="CustomGraphical_Resources">
       <grantPattern>${org.nuxeo.ecm.contextPath}/site/skin/customInvite/.*</grantPattern>
     </openUrl>
